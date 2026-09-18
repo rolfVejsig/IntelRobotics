@@ -11,13 +11,39 @@ function closeDetails() {
   }
 }
 
-document.querySelectorAll(".card-action").forEach((trigger) => {
+document.querySelectorAll(".card-action, .text-link").forEach((trigger) => {
   trigger.addEventListener("click", () => {
     lastTrigger = trigger;
     detailsTitle.textContent = trigger.dataset.title;
     detailsCopy.textContent = trigger.dataset.copy;
     detailsPanel.hidden = false;
     closeButton.focus();
+  });
+});
+
+const revealItems = document.querySelectorAll(".reveal");
+
+if ("IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.16 });
+
+  revealItems.forEach((item) => revealObserver.observe(item));
+} else {
+  revealItems.forEach((item) => item.classList.add("is-visible"));
+}
+
+const partnerList = document.querySelector(".partner-list");
+
+document.querySelectorAll(".strip-arrow").forEach((button) => {
+  button.addEventListener("click", () => {
+    const direction = button.dataset.stripDirection === "next" ? 1 : -1;
+    partnerList.scrollBy({ left: direction * 260, behavior: "smooth" });
   });
 });
 
