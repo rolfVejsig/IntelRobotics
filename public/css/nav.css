@@ -1,0 +1,121 @@
+.topbar,
+.product-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  min-height: 64px;
+  padding: 0 5.5vw;
+  border-bottom: 1px solid rgba(255,255,255,0.26);
+  background: rgba(45,47,51,0.78);
+  backdrop-filter: blur(14px);
+}
+
+.brand,
+.product-brand {
+  color: var(--text, var(--product-text, #f5f5f5));
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.nav,
+.product-nav {
+  grid-column: 2;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  gap: 30px;
+  color: rgba(255,255,255,0.8);
+  font-size: 13px;
+}
+
+.nav > a,
+.product-nav > a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.nav > a:hover,
+.nav > a:focus-visible,
+.product-nav > a:hover,
+.product-nav > a:focus-visible,
+.brand:hover,
+.brand:focus-visible,
+.product-brand:hover,
+.product-brand:focus-visible {
+  color: #fff;
+}
+
+.products-menu {
+  position: relative;
+}
+
+.products-menu::after {
+  content: "";
+  position: absolute;
+  top: calc(100% - 2px);
+  right: 0;
+  left: 0;
+  z-index: 1;
+  height: 12px;
+}
+
+.products-toggle {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.products-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  z-index: 2;
+  display: none;
+  min-width: 160px;
+  padding: 8px;
+  border: 1px solid rgba(255,255,255,0.26);
+  border-radius: 9px;
+  background: rgba(42,42,42,0.98);
+  box-shadow: 0 16px 32px rgba(0,0,0,0.32);
+  transform: translateX(-50%);
+}
+
+.products-menu.is-open .products-dropdown,
+.products-menu:focus-within .products-dropdown,
+.products-menu:hover .products-dropdown {
+  display: block;
+}
+
+.products-dropdown a {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 5px;
+  color: rgba(255,255,255,0.7);
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.products-dropdown a:hover,
+.products-dropdown a:focus-visible {
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+}
+
+@media (max-width: 640px) {
+  .topbar,
+  .product-topbar {
+    padding: 0 18px;
+  }
+
+  .nav,
+  .product-nav {
+    gap: 14px;
+    font-size: 11px;
+  }
+}

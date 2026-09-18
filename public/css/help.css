@@ -24,6 +24,7 @@
 
 .help-heading h2 {
   margin: 0 0 14px;
+  color: #fff;
   font-size: clamp(32px, 4vw, 52px);
   line-height: 1;
   font-weight: 400;
@@ -187,6 +188,7 @@
 
 .help-card h3 {
   margin: 0 0 9px;
+  color: #fff;
   font-size: 19px;
   line-height: 1.1;
   font-weight: 500;

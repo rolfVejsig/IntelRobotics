@@ -9,11 +9,19 @@
   <body>
     <div class="page">
       <header class="topbar">
-        <div class="brand">IntelRobotics</div>
+        <a class="brand" href="index.html">IntelRobotics</a>
         <nav class="nav" aria-label="Main navigation">
-          <a href="#">Home</a>
-          <a href="#">products</a>
-          <a href="#">Resources</a>
+          <a href="index.html">Home</a>
+          <div class="products-menu">
+            <button class="products-toggle" type="button" aria-expanded="false" aria-haspopup="true">
+              Products
+            </button>
+            <div class="products-dropdown">
+              <a href="prosthetics.html">Prosthetics</a>
+              <a href="#help-title">Logistics</a>
+            </div>
+          </div>
+          <a href="#help-title">Resources</a>
         </nav>
       </header>
 

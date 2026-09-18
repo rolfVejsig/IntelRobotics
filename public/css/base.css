@@ -14,23 +14,20 @@
   box-sizing: border-box;
 }
 
-html, body {
+body {
   margin: 0;
-  width: 100%;
-  min-height: 100%;
-  height: 100%;
-  overflow-x: hidden;
-  overflow-y: auto;
-  font-family: "Montserrat", sans-serif;
+  min-width: 320px;
   background: linear-gradient(
     180deg,
     #2d2f33 0%,
-    #2d2f33 30%,
-    #3a3442 40%,
+    #2d2f33 20%,
+    #3a3442 32%,
     #554052 100%
   );
-  color: var(--text);
+  color: var(--product-text);
+  font-family: "Montserrat", sans-serif;
 }
+
 
 body {
   display: flex;
@@ -42,10 +39,20 @@ body {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  padding: 20px 0 12px;
+  padding: 0 0 12px;
   display: flex;
   flex-direction: column;
   overflow: visible;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
 }
 
 .page::before {
@@ -64,37 +71,6 @@ body {
   filter: drop-shadow(0 25px 32px rgba(0, 0, 0, 0.18));
   pointer-events: none;
   z-index: 0;
-}
-
-.topbar {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-  padding: 2px 54px 10px;
-  border-bottom: 1px solid var(--line);
-}
-
-.brand {
-  font-size: 19px;
-  font-weight: 500;
-  letter-spacing: -0.03em;
-  color: rgba(255,255,255,0.9);
-}
-
-.nav {
-  grid-column: 2;
-  justify-self: center;
-  display: flex;
-  gap: 30px;
-  font-size: 17px;
-  color: rgba(255,255,255,0.8);
-}
-
-.nav a {
-  text-decoration: none;
-  color: inherit;
 }
 
 main {
