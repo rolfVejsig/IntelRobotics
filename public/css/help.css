@@ -39,17 +39,20 @@
   line-height: 1.55;
 }
 
-.partner-heading {
+.partner-heading,
+.company-heading {
   max-width: 960px;
   margin: 0 auto 14px;
   text-align: left;
 }
 
-.partner-heading .section-kicker {
+.partner-heading .section-kicker,
+.company-heading .section-kicker {
   margin-bottom: 6px;
 }
 
-.partner-heading h3 {
+.partner-heading h3,
+.company-heading h3 {
   margin: 0;
   color: rgba(255,255,255,0.94);
   font-size: 24px;
@@ -142,6 +145,14 @@
   box-shadow: 0 22px 42px rgba(0,0,0,0.26);
 }
 
+.help-card .help-card-body {
+  display: grid;
+}
+
+.help-card.is-open .help-card-body {
+  display: grid;
+}
+
 .help-image-wrap {
   height: 230px;
   overflow: hidden;
@@ -173,7 +184,7 @@
 .help-card-content {
   display: flex;
   flex-direction: column;
-  min-height: 190px;
+  min-height: 120px;
   padding: 22px 22px 24px;
 }
 
@@ -187,19 +198,26 @@
 }
 
 .help-card h3 {
-  margin: 0 0 9px;
+  margin: 0;
   color: #fff;
   font-size: 19px;
   line-height: 1.1;
   font-weight: 500;
 }
 
+.help-card-body {
+  display: grid;
+  gap: 12px;
+  padding: 0 22px 22px;
+}
+
 .help-card p {
   margin: 0;
   color: rgba(255,255,255,0.68);
   font-size: 11px;
-  line-height: 1.45;
+  line-height: 1.55;
 }
+
 
 .text-link {
   margin-top: auto;

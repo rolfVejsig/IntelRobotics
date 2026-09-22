@@ -17,8 +17,8 @@
               Products
             </button>
             <div class="products-dropdown">
-              <a href="prosthetics.html">Prosthetics</a>
-              <a href="#help-title">Logistics</a>
+              <a href="prosthetics.html">Industrial robotics</a>
+              <a href="logistics.html">Logistics</a>
             </div>
           </div>
           <a href="#help-title">Resources</a>
@@ -44,25 +44,25 @@
 
         <section class="cards" aria-label="Robot product highlights">
           <article class="card purple">
-            <img src="images/robots/prosthetic_hand.png" alt="Prosthetic hand" />
+            <img src="images/robots/industrial_robot_arm.png" alt="Industrial robot arm" />
             <div class="card-content">
-              <h3>Prosthetic hand</h3>
+              <h3>Industrial robot arms</h3>
               <p>
-                A dexterous assistive hand for gripping, rehabilitation, and precise everyday tasks.
+                High-precision automation for assembly, material handling, and repeatable production work.
               </p>
             </div>
-            <button class="card-action" type="button" data-title="Prosthetic hand" data-copy="An adaptive robotic hand designed for precise assistance, rehabilitation, and delicate handling.">Explore product <span aria-hidden="true">&#8594;</span></button>
+            <button class="card-action" type="button" data-route="prosthetics.html">Explore product <span aria-hidden="true">&#8594;</span></button>
           </article>
 
           <article class="card rose">
-            <img src="images/robots/prosthetic_leg.png" alt="Prosthetic leg" />
+            <img src="images/robots/advanced_laser_cutting_machine.png" alt="Advanced laser cutting machine" />
             <div class="card-content">
-              <h3>Prosthetic leg</h3>
+              <h3>Laser cutting systems</h3>
               <p>
-                A responsive lower-limb system built to support balance, walking, and natural movement.
+                Accurate fabrication systems for faster cutting, cleaner production, and less material waste.
               </p>
             </div>
-            <button class="card-action" type="button" data-title="Prosthetic leg" data-copy="A responsive robotic leg concept built for controlled movement and reliable support across changing terrain.">Explore product <span aria-hidden="true">&#8594;</span></button>
+            <button class="card-action" type="button" data-route="prosthetics.html#laser-models">Explore product <span aria-hidden="true">&#8594;</span></button>
           </article>
 
           <article class="card blue">
@@ -73,7 +73,7 @@
                 Autonomous mobile robots that navigate facilities and move materials without fixed routes.
               </p>
             </div>
-            <button class="card-action" type="button" data-title="Autonomous mobile robots" data-copy="Flexible mobile systems that navigate workspaces, inspect components, and adapt to changing production demands.">Explore product <span aria-hidden="true">&#8594;</span></button>
+            <button class="card-action" type="button" data-route="logistics.html#amr-models">Explore product <span aria-hidden="true">&#8594;</span></button>
           </article>
 
           <article class="card lavender">
@@ -84,7 +84,7 @@
                 Guided vehicles for repeatable material transport between workstations and storage areas.
               </p>
             </div>
-            <button class="card-action" type="button" data-title="Automated guided vehicles" data-copy="Reliable guided transport for repeatable material movement, warehouse flow, and connected industrial operations.">Explore product <span aria-hidden="true">&#8594;</span></button>
+            <button class="card-action" type="button" data-route="logistics.html#agv-models">Explore product <span aria-hidden="true">&#8594;</span></button>
           </article>
         </section>
 
@@ -113,51 +113,56 @@
             <button class="strip-arrow" type="button" data-strip-direction="next" aria-label="Show next partner">&#8594;</button>
           </div>
 
+          <div class="company-heading reveal">
+            <span class="section-kicker">What we stand for</span>
+            <h3>Our company values</h3>
+          </div>
+
           <div class="help-grid">
-            <article class="help-card reveal">
+            <article class="help-card reveal is-open">
               <div class="help-image-wrap">
-                <img src="images/robots/robot_arm.png" alt="Industrial robot arm working beside a person" />
+                <img src="images/how can we help/working_with_robots.jpg" alt="People working alongside industrial robots" />
               </div>
               <div class="help-card-content">
                 <span class="help-number">01</span>
-                <h3>Automate repetitive work</h3>
-                <p>Give your team more time for decisions, craft, and the work that needs a human eye.</p>
-                <button class="text-link" type="button" data-title="Automation" data-copy="We map repetitive tasks and design practical robotic support that fits your existing workflow.">See how <span aria-hidden="true">&#8594;</span></button>
+                <h3>Human-centered automation</h3>
+              </div>
+              <div class="help-card-body">
+                <p>We design robotics that make work safer, smarter, and more human by removing repetitive strain and freeing teams to focus on higher-value decisions. Our systems are created to support people, not replace the expertise that already makes operations successful.</p>
+                <p>That means better workflows, stronger collaboration between people and machines, and a more sustainable way to scale production without creating unnecessary complexity.</p>
               </div>
             </article>
 
-            <article class="help-card reveal">
+            <article class="help-card reveal is-open">
               <div class="help-image-wrap">
-                <img src="images/robots/Autonomous_Mobile_Robots.png" alt="Autonomous mobile robots in a facility" />
+                <img src="images/how can we help/amrs.jpg" alt="Autonomous mobile robots navigating a facility" />
               </div>
               <div class="help-card-content">
                 <span class="help-number">02</span>
-                <h3>Move materials intelligently</h3>
-                <p>Connect stations, storage, and people with mobile robots that adapt as your floor changes.</p>
-                <button class="text-link" type="button" data-title="Smart logistics" data-copy="Our AMR and AGV systems help materials arrive at the right place with less manual travel and delay.">See how <span aria-hidden="true">&#8594;</span></button>
+                <h3>Practical innovation</h3>
+              </div>
+              <div class="help-card-body">
+                <p>Our solutions are built for real operations, prioritizing reliability, adaptability, and measurable impact across factories, warehouses, and production lines. We believe ambitious ideas only matter when they work in everyday conditions.</p>
+                <p>From deployment to long-term optimization, we focus on systems that are easy to integrate, resilient in use, and built to improve efficiency without disrupting the flow of your business.</p>
               </div>
             </article>
 
-            <article class="help-card reveal">
+            <article class="help-card reveal is-open">
               <div class="help-image-wrap">
-                <img src="images/robots/automated_guided_vehicle.png" alt="Automated guided vehicle moving goods" />
+                <img src="images/how can we help/agvs.jpg" alt="Automated guided vehicles transporting materials" />
               </div>
               <div class="help-card-content">
                 <span class="help-number">03</span>
-                <h3>Build a safer flow</h3>
-                <p>Use reliable navigation and clear handoffs to make everyday movement calmer and more predictable.</p>
-                <button class="text-link" type="button" data-title="Safer operations" data-copy="We combine guided movement, sensing, and thoughtful handoffs to reduce friction across busy workspaces.">See how <span aria-hidden="true">&#8594;</span></button>
+                <h3>Built for long-term progress</h3>
+              </div>
+              <div class="help-card-body">
+                <p>We believe in scalable automation that grows with your business, helping teams move faster while building more resilient, future-ready operations. Progress should be sustainable, measurable, and grounded in real performance.</p>
+                <p>By combining flexible technology with thoughtful strategy, we help businesses create systems that can evolve with demand, improve operations over time, and support a stronger future for the teams behind them.</p>
               </div>
             </article>
           </div>
         </section>
 
-        <aside class="details-panel" hidden aria-live="polite">
-          <button class="details-close" type="button" aria-label="Close product details">&times;</button>
-          <span class="details-label">Product focus</span>
-          <h2></h2>
-          <p></p>
-        </aside>
       </main>
     </div>
 

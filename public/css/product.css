@@ -261,20 +261,6 @@ body {
   padding-bottom: 110px;
 }
 
-.product-toast {
-  position: fixed;
-  right: 28px;
-  bottom: 28px;
-  z-index: 20;
-  padding: 14px 18px;
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 8px;
-  background: rgba(0,24,14,0.96);
-  color: #fff;
-  font-size: 11px;
-  box-shadow: 0 14px 30px rgba(0,0,0,0.3);
-}
-
 @media (max-width: 760px) {
   .product-hero {
     grid-template-columns: 1fr;

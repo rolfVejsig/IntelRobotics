@@ -45,11 +45,6 @@
     grid-template-columns: repeat(2, minmax(220px, 1fr));
   }
 
-  .details-panel {
-    right: 16px;
-    bottom: 16px;
-  }
-
   .help-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -112,4 +107,3 @@
   .help-image-wrap {
     height: 210px;
   }
-}
