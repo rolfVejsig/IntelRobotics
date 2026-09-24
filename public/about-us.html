@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About us | IntelRobotics</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+      body {
+        background: linear-gradient(180deg, #2d2f33 0%, #2d2f33 20%, #3a3442 32%, #554052 100%);
+      }
+
+      .page {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      .topbar {
+        background: rgba(45,47,51,0.78);
+        border-bottom: 1px solid rgba(255,255,255,0.18);
+        padding: 0 5.5vw;
+      }
+
+      .topbar .brand,
+      .topbar .nav,
+      .topbar .nav a,
+      .topbar .products-toggle,
+      .topbar .products-dropdown a {
+        color: rgba(255,255,255,0.82);
+      }
+
+      .about-shell {
+        width: min(1280px, calc(100% - 40px));
+        margin: 26px auto 0;
+        padding: 18px 18px 24px;
+        background: rgba(27, 29, 32, 0.18);
+        border: 1px solid rgba(255,255,255,0.08);
+        min-height: calc(100vh - 120px);
+      }
+
+      .about-intro {
+        display: grid;
+        grid-template-columns: 1.05fr 1.3fr;
+        align-items: center;
+        gap: 18px;
+        padding: 10px 0 14px;
+      }
+
+      .about-copy {
+        padding: 20px 8px 30px 18px;
+      }
+
+      .about-copy h1 {
+        font-size: clamp(2.8rem, 4vw, 5rem);
+        line-height: 0.96;
+        letter-spacing: -0.06em;
+        color: rgba(255,255,255,0.94);
+        font-weight: 300;
+        margin: 0;
+        max-width: 520px;
+      }
+
+      .about-copy p {
+        margin: 22px 0 0;
+        font-size: 1.04rem;
+        line-height: 1.6;
+        color: rgba(255,255,255,0.78);
+        max-width: 500px;
+      }
+
+      .about-photo {
+        position: relative;
+        width: 100%;
+        min-height: 360px;
+        overflow: hidden;
+        border-radius: 12px;
+        background: rgba(255,255,255,0.02);
+        box-shadow: inset 0 0 0 1px rgba(255,255,255,0.06);
+      }
+
+      .about-photo img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        filter: saturate(0.85) contrast(1.06) brightness(0.95);
+      }
+
+      .about-story {
+        display: grid;
+        grid-template-columns: 170px 1fr 1fr;
+        gap: 0;
+        margin-top: 18px;
+        min-height: 420px;
+      }
+
+      .about-vertical {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(92, 100, 124, 0.9);
+        color: rgba(255,255,255,0.96);
+        font-size: clamp(2.6rem, 3vw, 5rem);
+        line-height: 0.86;
+        font-weight: 500;
+        letter-spacing: -0.08em;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        text-transform: none;
+        border-right: 1px solid rgba(255,255,255,0.08);
+      }
+
+      .about-story-card {
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.08);
+        padding: 30px 34px 24px;
+        display: flex;
+        align-items: center;
+      }
+
+      .about-story-card p {
+        margin: 0;
+        font-size: 0.98rem;
+        line-height: 1.8;
+        color: rgba(255,255,255,0.8);
+      }
+
+      .about-story-card p + p {
+        margin-top: 1.25rem;
+      }
+
+      .about-accent {
+        background: linear-gradient(180deg, rgba(145, 164, 197, 0.9), rgba(108, 120, 146, 0.8));
+        min-height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .about-accent img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      @media (max-width: 900px) {
+        .about-intro,
+        .about-story {
+          grid-template-columns: 1fr;
+        }
+
+        .about-vertical {
+          writing-mode: horizontal-tb;
+          transform: none;
+          min-height: 96px;
+          border-right: 0;
+          border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .about-accent {
+          min-height: 150px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header class="topbar">
+        <a class="brand" href="index.html">IntelRobotics</a>
+        <nav class="nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <div class="products-menu">
+            <button class="products-toggle" type="button" aria-expanded="false" aria-haspopup="true">
+              Products
+            </button>
+            <div class="products-dropdown">
+              <a href="industrial_robotics.html">Industrial robotics</a>
+              <a href="logistics.html">Logistics</a>
+            </div>
+          </div>
+          <a href="about-us.html">About us</a>
+        </nav>
+      </header>
+
+      <main class="about-shell">
+        <section class="about-intro">
+          <div class="about-copy">
+            <h1>Built for smarter operations.<br />Driven by real-world automation.</h1>
+            <p>
+              IntelRobotics helps manufacturers, warehouses, and logistics teams design more efficient, reliable, and
+              scalable operations through practical robotics and intelligent automation systems.
+            </p>
+          </div>
+          <div class="about-photo">
+            <img src="images/about_us/Humans-working-with-robots.jpg" alt="People working with robotics systems" />
+          </div>
+        </section>
+
+        <section class="about-story" aria-labelledby="about-story-title">
+          <div class="about-vertical" aria-hidden="true">About us</div>
+          <div class="about-story-card">
+            <div>
+              <p id="about-story-title">
+                Since 2011, IntelRobotics has been helping businesses turn complex operational challenges into practical,
+                measurable automation solutions. We work with teams that need more than just equipment: they need systems
+                that improve flow, strengthen safety, and support long-term productivity.
+              </p>
+              <p>
+                Our approach combines robotics expertise, production insight, and thoughtful engineering to create solutions
+                that fit the realities of modern manufacturing and logistics. From industrial automation to autonomous
+                material handling, we focus on systems that are dependable, scalable, and easy to integrate into day-to-day
+                operations.
+              </p>
+              <p>
+                We believe the most effective technology is the kind that removes friction without adding unnecessary
+                complexity. That is why we design solutions around performance, adaptability, and long-term value for the
+                people and businesses using them every day.
+              </p>
+            </div>
+          </div>
+          <div class="about-accent" aria-hidden="true">
+            <img src="images/about_us/humans-working-with-robots-2.jpg" alt="Robots and operators collaborating in an industrial environment" />
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

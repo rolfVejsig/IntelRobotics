@@ -51,7 +51,7 @@ main {
   min-height: 0;
 }
 
-.page::before {
+.home-page .page::before {
   content: "";
   position: fixed;
   right: -85px;
