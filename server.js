@@ -4,8 +4,10 @@ const path = require('path');
 const app = express();
 const port = 3000;
 
+const GetCategories = require('./routes/GetCategories')
 const GetProducts = require('./routes/GetProducts')
 
+app.use('/api/categories', GetCategories)
 app.use('/api/products', GetProducts)
 app.use(express.static(path.join(__dirname, 'public')));
 

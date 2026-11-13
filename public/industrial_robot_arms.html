@@ -6,7 +6,7 @@
     <title>Industrial Robotics | IntelRobotics</title>
     <link rel="stylesheet" href="css/product.css" />
   </head>
-  <body class="product-page">
+  <body class="product-page" data-category-id="1">
     <header class="product-topbar">
       <a class="product-brand" href="index.html">IntelRobotics</a>
       <nav class="product-nav" aria-label="Main navigation">
@@ -24,70 +24,59 @@
       </nav>
     </header>
 
-    <main>
-      <section class="product-hero" aria-labelledby="robot-title">
-        <div class="product-art product-art-hand">
-          <img src="images/robots/industrial_robot_arm.png" alt="Industrial robot arm" />
-        </div>
-        <div class="product-intro">
-          <span class="product-kicker">Industrial robotics / Precision automation</span>
-          <h1 id="robot-title">AI-driven<br />industrial robots</h1>
-          <p class="product-price">Price from <strong>$42,000</strong></p>
-          <p>High-precision robot arms engineered for assembly, handling, and repeatable production work across modern facilities.</p>
-          <a class="product-link" href="#robot-models">View robot models <span aria-hidden="true">&#8595;</span></a>
-        </div>
-      </section>
+   
+  <main>
+    <!-- Category hero -->
+    <section class="product-hero" aria-labelledby="category-title">
 
-      <section class="model-section" id="robot-models" aria-labelledby="robot-models-title">
+        <div class="product-art product-art-hand">
+            <img id="category-image" alt="" hidden />
+        </div>
+
+        <div class="product-intro">
+
+            <span class="product-kicker" id="category-kicker"></span>
+
+            <h1 id="category-title"></h1>
+
+            <p class="product-price" id="category-price" hidden>
+                Price from <strong id="category-min-price"></strong>
+            </p>
+
+            <p id="category-description"></p>
+
+            <a class="product-link" href="#robot-models">
+                View models <span aria-hidden="true">&#8595;</span>
+            </a>
+
+        </div>
+    </section>
+
+
+    <!-- Individual products -->
+    <section class="model-section" id="robot-models">
+
         <div class="model-heading">
-          <span class="product-kicker">Choose your automation setup</span>
-          <h2 id="robot-models-title">Find the right robot for your line.</h2>
+
+            <span class="product-kicker">
+                Choose your automation setup
+            </span>
+
+            <h2 id="models-heading"></h2>
+
         </div>
-        <div class="pricing-grid">
-          <article class="pricing-card">
-            <h3>Standard robot arm</h3>
-            <span class="model-note">Reliable production support</span>
-            <p>Flexible automation for repetitive handling, assembly, and standardized production workflows.</p>
-            <strong class="model-price">$42,000</strong>
-            <button class="sales-button" type="button" data-product="Standard robot arm">Contact sales</button>
-            <ul>
-              <li>6-axis motion</li>
-              <li>Vision-ready integration</li>
-              <li class="not-included">AI guidance</li>
-              <li class="not-included">Custom tooling</li>
-            </ul>
-          </article>
-          <article class="pricing-card recommended">
-            <span class="recommended-label">Recommended</span>
-            <h3>Premium robot arm</h3>
-            <span class="model-note">Greater speed and precision</span>
-            <p>Optimized for faster cycle times, tighter tolerances, and flexible cell integration.</p>
-            <strong class="model-price">$68,000</strong>
-            <button class="sales-button" type="button" data-product="Premium robot arm">Contact sales</button>
-            <ul>
-              <li>6-axis motion</li>
-              <li>AI guidance</li>
-              <li>Precision calibration</li>
-              <li class="not-included">Custom end-effector package</li>
-            </ul>
-          </article>
-          <article class="pricing-card">
-            <h3>Pro automation cell</h3>
-            <span class="model-note">Fully tailored performance</span>
-            <p>Advanced robot integration for multi-stage automation, inspection, and high-output manufacturing.</p>
-            <strong class="model-price">$94,000</strong>
-            <button class="sales-button" type="button" data-product="Pro automation cell">Contact sales</button>
-            <ul>
-              <li>6-axis motion</li>
-              <li>AI guidance</li>
-              <li>Full system integration</li>
-              <li>Custom end-effector package</li>
-            </ul>
-          </article>
+
+        <div class="pricing-grid" id="product-grid">
+
+            <p>Loading products...</p>
+
         </div>
-      </section>      
-    </main>
+
+    </section>
+
+  </main>
 
     <script src="js/main.js"></script>
+    <script src="js/product-page.js"></script>
   </body>
 </html>

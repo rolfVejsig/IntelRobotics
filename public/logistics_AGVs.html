@@ -6,7 +6,7 @@
     <title>Logistics Robotics | IntelRobotics</title>
     <link rel="stylesheet" href="css/product.css" />
 </head>
-<body>
+<body data-category-id="4">
     <header class="product-topbar">
       <a class="product-brand" href="index.html">IntelRobotics</a>
       <nav class="product-nav" aria-label="Main navigation">
@@ -24,70 +24,60 @@
       </nav>
     </header>
 
-    <main>
-        <section class="product-hero product-hero-leg" aria-labelledby="agv-title">
-        <div class="product-art product-art-leg">
-          <img src="images/robots/automated_guided_vehicle.png" alt="Automated guided vehicle" />
-        </div>
-        <div class="product-intro">
-          <span class="product-kicker">Logistics / Guided transport</span>
-          <h2 id="agv-title">Automated guided<br />vehicle solutions</h2>
-          <p class="product-price">Price from <strong>$22,000</strong></p>
-          <p>Repeatable, route-driven transport systems for warehouses, assembly facilities, and material delivery lanes.</p>
-          <a class="product-link" href="#agv-models">View AGV models <span aria-hidden="true">&#8595;</span></a>
-        </div>
-      </section>
 
-      <section class="model-section leg-models" id="agv-models" aria-labelledby="agv-models-title">
+<main>
+    <!-- Category hero -->
+    <section class="product-hero" aria-labelledby="category-title">
+
+        <div class="product-art product-art-hand">
+            <img id="category-image" alt="" hidden />
+        </div>
+
+        <div class="product-intro">
+
+            <span class="product-kicker" id="category-kicker"></span>
+
+            <h1 id="category-title"></h1>
+
+            <p class="product-price" id="category-price" hidden>
+                Price from <strong id="category-min-price"></strong>
+            </p>
+
+            <p id="category-description"></p>
+
+            <a class="product-link" href="#robot-models">
+                View models <span aria-hidden="true">&#8595;</span>
+            </a>
+
+        </div>
+    </section>
+
+
+    <!-- Individual products -->
+    <section class="model-section" id="robot-models">
+
         <div class="model-heading">
-          <span class="product-kicker">Designed for predictable transport</span>
-          <h2 id="agv-models-title">Efficient movement for every shift.</h2>
+
+            <span class="product-kicker">
+                Choose your automation setup
+            </span>
+
+            <h2 id="models-heading"></h2>
+
         </div>
-        <div class="pricing-grid">
-          <article class="pricing-card">
-            <h3>Standard AGV</h3>
-            <span class="model-note">Straightforward material delivery</span>
-            <p>Reliable guided transport across fixed paths for repetitive material movement and shorter lead times.</p>
-            <strong class="model-price">$22,000</strong>
-            <button class="sales-button" type="button" data-product="Standard AGV">Contact sales</button>
-            <ul>
-              <li>Fixed route transport</li>
-              <li>Safety-aware navigation</li>
-              <li class="not-included">Fleet optimization</li>
-              <li class="not-included">Advanced docking</li>
-            </ul>
-          </article>
-          <article class="pricing-card recommended">
-            <span class="recommended-label">Recommended</span>
-            <h3>Premium AGV</h3>
-            <span class="model-note">Smarter, more adaptable flow</span>
-            <p>Optimized for facilities that need more coordination between staging areas, workstations, and inventory zones.</p>
-            <strong class="model-price">$36,000</strong>
-            <button class="sales-button" type="button" data-product="Premium AGV">Contact sales</button>
-            <ul>
-              <li>Fixed route transport</li>
-              <li>Fleet optimization</li>
-              <li>Advanced docking</li>
-              <li class="not-included">Custom line integration</li>
-            </ul>
-          </article>
-          <article class="pricing-card">
-            <h3>Pro AGV system</h3>
-            <span class="model-note">Connected transport network</span>
-            <p>End-to-end guided logistics for warehouses and production areas with coordinated movement and route control.</p>
-            <strong class="model-price">$52,000</strong>
-            <button class="sales-button" type="button" data-product="Pro AGV system">Contact sales</button>
-            <ul>
-              <li>Fixed route transport</li>
-              <li>Fleet optimization</li>
-              <li>Advanced docking</li>
-              <li>Custom line integration</li>
-            </ul>
-          </article>
+
+        <div class="pricing-grid" id="product-grid">
+
+            <p>Loading products...</p>
+
         </div>
-      </section>
-    </main>
+
+    </section>
+
+</main>
+
 
     <script src="js/main.js"></script>
+    <script src="js/product-page.js"></script>
 </body>
 </html>
