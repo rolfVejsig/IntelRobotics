@@ -5,45 +5,31 @@ const router = express.Router();
 const { pool } = require('../config/database');
 
 router.get('/Get_categories', async (req, res) => {
-
     try {
-        // Execute stored procedure
-        const [results] = await pool.query(
-            'CALL Get_all_products()'
-        );
-
-        // First result set contains the SELECT results
+        const [results] = await pool.query('CALL Get_all_products()');
         const rows = results[0];
 
-        const categoryMap = new Map();
-        const productMap = new Map();
+        const categories = new Map();
 
-        // Organize SQL rows into categories and products
         for (const row of rows) {
-
-            // Create category if it does not exist
-            if (!categoryMap.has(row.category_id)) {
-
-                categoryMap.set(row.category_id, {
+            if (!categories.has(row.category_id)) {
+                categories.set(row.category_id, {
                     category_id: row.category_id,
                     category_name: row.category_name,
                     category_description: row.category_description,
                     image_path: row.image_path,
+                    page_path: row.page_path, // New field
                     products: []
                 });
             }
 
-            // Skip product creation for empty categories
-            if (row.product_id === null) {
-                continue;
-            }
+            const category = categories.get(row.category_id);
+            let product = category.products.find(
+                item => item.product_id === row.product_id
+            );
 
-            const category = categoryMap.get(row.category_id);
-
-            // Create product if it does not exist
-            if (!productMap.has(row.product_id)) {
-
-                const product = {
+            if (!product) {
+                product = {
                     product_id: row.product_id,
                     product_name: row.product_name,
                     product_price: row.product_price,
@@ -51,15 +37,10 @@ router.get('/Get_categories', async (req, res) => {
                     advantages: []
                 };
 
-                productMap.set(row.product_id, product);
                 category.products.push(product);
             }
 
-            const product = productMap.get(row.product_id);
-
-            // Add advantage if one exists
             if (row.advantage_id !== null) {
-
                 product.advantages.push({
                     advantage_id: row.advantage_id,
                     advantage_content: row.advantage_content,
@@ -68,20 +49,13 @@ router.get('/Get_categories', async (req, res) => {
             }
         }
 
-        // Convert Map into a normal array for JSON
-        const categories = Array.from(categoryMap.values());
-
         res.status(200).json({
-            categories: categories
+            categories: Array.from(categories.values())
         });
 
     } catch (error) {
-
         console.error('Products collection error:', error);
-
-        res.status(500).json({
-            error: 'Database error'
-        });
+        res.status(500).json({ error: 'Database error' });
     }
 });
 

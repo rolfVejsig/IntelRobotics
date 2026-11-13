@@ -77,8 +77,7 @@ async function loadProductCategories() {
             button.textContent = 'Explore products →';
 
             button.addEventListener('click', () => {
-                window.location.href =
-                    `products.html?category=${encodeURIComponent(category.category_id)}`;
+                window.location.href = category.page_path;
             });
 
             article.append(image, content, button);
